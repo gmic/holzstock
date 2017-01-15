@@ -1,2 +1,11 @@
-.idea/
+__pycache__
+*.pyc
+*.db
+.sass-cache/
+.coverage
+.tox
+node_modules/
+.idea
 db.sqlite3
+bower_components/
+/media
