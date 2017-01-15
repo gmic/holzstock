@@ -1,1 +1,2 @@
 wagtail>=1.8,<1.9
+django-bootstrap3>=8.0,<9.0
