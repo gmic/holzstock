@@ -1,0 +1,11 @@
+{% extends "holzstock/base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-homepage1{% endblock %}
+
+{% block inner_content %}
+    {{ page.body|richtext }}
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/qdUOH3GeqxY" frameborder="0" allowfullscreen></iframe>
+{% endblock %}

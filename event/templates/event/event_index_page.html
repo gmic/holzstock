@@ -1,0 +1,11 @@
+{% extends "holzstock/base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-homepage1{% endblock %}
+
+{% block content %}
+    {{ page.body|richtext }}
+
+    TODO: Toon hier events
+{% endblock %}
