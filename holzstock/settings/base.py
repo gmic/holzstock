@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'home',
     'search',
+    'embed_video',
 
     'wagtail.wagtailforms',
     'wagtail.wagtailredirects',
@@ -165,3 +166,10 @@ WAGTAIL_SITE_NAME = "holzstock"
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://www.holzstock.com'
+
+EMBED_VIDEO_BACKENDS = (
+    'embed_video.backends.YoutubeBackend',
+    'embed_video.backends.VimeoBackend',
+    'embed_video.backends.SoundCloudBackend',
+    'my_app.backends.CustomBackend',
+)
