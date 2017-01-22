@@ -7,23 +7,3 @@ DEBUG = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '%=)6bism^arxmrszw^d$y!n2t6^)edvbgc0&1b9z5o4cb-on_y'
-
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('DATABASE_NAME', 'holzstock-dev'),
-        'USER': os.getenv('DATABASE_USER', 'holzstock-dev'),
-        'PASSWORD': os.getenv('DATABASE_PASSWORD', 'holzstock-dev'),
-        'HOST': os.getenv('DATABASE_HOST', 'localhost'),
-        'PORT': os.getenv('DATABASE_PORT', '5432'),
-    }
-}
-
-
-try:
-    from .local import *
-except ImportError:
-    pass

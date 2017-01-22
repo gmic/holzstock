@@ -22,7 +22,12 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
-ALLOWED_HOSTS = ['*']
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY',
+                       '%of1xgdp+8s&b7g+dmr^9=0b!rlg5)imp_$wx8lig-*u%pzq33')
+
+WWW_HOST = "www.citizenline.local"
+ALLOWED_HOSTS = ['localhost', '.holzstock.com', '.holzstock.local']
 
 # Application definition
 
@@ -99,15 +104,6 @@ WSGI_APPLICATION = 'holzstock.wsgi.application'
 # # Database
 # # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 #
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-# Database
-# https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -137,19 +133,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-]
+STATIC_ROOT = os.getenv('STATIC_ROOT',
+                        os.path.join(BASE_DIR, 'collected_static'))
+
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(PROJECT_DIR, 'static'),
 ]
 
-STATIC_ROOT = os.getenv('STATIC_ROOT',
-                        os.path.join(BASE_DIR, 'collected_static'))
-
-STATIC_URL = '/static/'
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
 
 
 # Media files.
@@ -159,6 +155,20 @@ MEDIA_ROOT = os.getenv('MEDIA_ROOT', os.path.join(BASE_DIR, 'media'))
 MEDIA_URL = '/media/'
 
 
+# Email settings.
+
+EMAIL_HOST = os.getenv('EMAIL_HOST', 'localhost')
+EMAIL_PORT = os.getenv('EMAIL_PORT', 25)
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = False
+
+DEFAULT_FROM_EMAIL = 'Info <info@holzstock.com>'
+SERVER_EMAIL = 'Alerts <alerts@holzstock.com>'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
 # Wagtail settings
 
 WAGTAIL_SITE_NAME = "holzstock"
@@ -166,6 +176,7 @@ WAGTAIL_SITE_NAME = "holzstock"
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://www.holzstock.com'
+
 
 # Google API key: "AIzaSyDOCXZ29Tu4dVRn3lq3b5j8TEUVtDG39_o"
 # see: https://console.developers.google.com/apis/credentials?project=holzstock-156006
