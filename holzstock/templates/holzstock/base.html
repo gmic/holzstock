@@ -34,24 +34,74 @@
       </p>
   <![endif]-->
 {% wagtailuserbar %}
+
 {% block header_wrapper %}
-<header id="header" role="heading">
 {% block header %}
-    <h2 class="visuallyhidden">Header</h2>
-    <div id="top-nav" role="navigation">
-    <h2 class="visuallyhidden">Top Navigation</h2>
-        <div class="container">
-            <div class="row">
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a href="/">HOLZSTOCK.COM</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/nieuws">Nieuws</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="/live">Live</a></li>
-            </div><!--/ end row -->
-        </div><!--/ end container -->
-    </div><!--/ end top-nav -->
+
+
+    <!-- Fixed navbar -->
+  <!--
+    <nav id="top-nav" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Holzstocksuckerklutzbonbon</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li><a href="../navbar-static-top/">Static top</a></li>
+            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    -->
+      <nav id="top-nav" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Holzstocksuckerklutzbonbon</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/home">Home</a></li>
+            <li><a href="/nieuws">Nieuws</a></li>
+            <li><a href="/live">Live</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
 {% block banner_wrapper %}
 {% endblock banner_wrapper %}
 
@@ -59,7 +109,7 @@
 {% endblock main_nav_wrapper %}
 
 {% block breadcrumb_wrapper %}
-<div id="breadcrumb">
+<!--  div id="breadcrumb">
     <h2 class="visuallyhidden">Breadcrumbs</h2>
     <div class="container">
         <div class="row">
@@ -69,36 +119,21 @@
                 <li class="active">Child</li>
             {% endblock breadcrumb %}
             </ol>
-        </div><!--/ end row -->
-    </div><!--/ end container -->
+        </div>
+    </div>
 </div><!--/ end breadcrumb -->
 {% endblock breadcrumb_wrapper %}
 {% endblock header %}
-</header><!--/ end header -->
 {% endblock header_wrapper %}
 
 {% block content_wrapper %}
+
 <main id="content" role="main">
+
     {% block content %}
 		<h1 class="visuallyhidden">Main Content Title</h1>
 		<div class="container">
 		    <div class="row">
-			  {% block left_sidebar %}
-		    <aside id="sidebar" role="complimentary">
-		        <div class="col-md-3">
-		        <h2>Sidebar Content</h2>
-		            <nav id="sidebar-nav">
-		                <ul>
-		                    <li><a href="#">Item 1</a></li>
-		                    <li><a class="current" href="#">Item 2</a></li>
-		                    <li><a href="#">Item 3</a></li>
-		                    <li><a href="#">Item 4</a></li>
-		                    <li><a href="#">Item 5</a></li>
-		                </ul>
-		            </nav>
-		        </div><!--/ end col-md-3 -->
-		    </aside>
-		    {% endblock left_sidebar %}
 		    {% block inner_content %}
 		        <div class="col-md-9">
 		        <h1>Main Content Title</h1>
@@ -176,70 +211,9 @@
 <footer id="footer">
     {% block footer %}
     <div class="container">
-	      <div class="row">
-	          <div class="col-md-2">
-		            <h5>Wharton</h5>
-		            <ul>
-		                <li><a href="http://www.wharton.upenn.edu">Home</a></li>
-		                <li><a href="http://www.wharton.upenn.edu/about-wharton">About Wharton</a></li>
-		                <li><a href="http://www.wharton.upenn.edu/academics">Academics</a></li>
-		                <li><a href="http://www.wharton.upenn.edu/faculty-and-research">Faculty and Research</a></li>
-		            </ul>
-		        </div><!--/ end col-md-2 -->
-		        <div class="col-md-3">
-		            <h5>&nbsp;</h5>
-		            <ul>
-			              <li><a href="http://alumni.wharton.upenn.edu">Alumni Home</a></li>
-		                <li><a href="http://www.wharton.upenn.edu/locations">Locations</a></li>
-		                <li><a href="http://www.wharton.upenn.edu/contact-us-directories">Contact Us</a></li>
-		                <li><a href="http://recruiters-corp.wharton.upenn.edu/">Recruiters and Corporations</a></li>
-		            </ul>
-		        </div><!--/ end col-md-3 -->
-            <div class="col-md-2 quicklinks">
-		            <h5>Quicklinks</h5>
-		            <ul>
-		                <li><a href="http://undergrad.wharton.upenn.edu">Undergraduate</a></li>
-		                <li><a href="http://mba.wharton.upenn.edu">MBA</a></li>
-		                <li><a href="http://executivemba.wharton.upenn.edu">Executive MBA</a></li>
-		                <li><a href="http://doctoral.wharton.upenn.edu">Doctoral</a></li>
-		            </ul>
-		        </div><!--/ end col-md-2 quicklinks -->
-		        <div class="col-md-3">
-		            <h5>Featured Links</h5>
-		            <ul>
-		                <li><a href="http://giving.wharton.upenn.edu">Giving to Wharton</a></li>
-		                <li><a href="http://alumni.wharton.upenn.edu/get-involved">Alumni Connect</a></li>
-		                <li><a href="http://news.wharton.upenn.edu">News</a></li>
-		            </ul>
-		        </div><!--/ end col-md-3 -->
-	  	      <div class="col-md-2 social-icons">
-				        <ul class="social-icons__links">
-                              <a href="https://www.facebook.com/WhartonSchool"><li class="facebook-icon"></li></a>
-					          <a href="https://www.twitter.com/wharton"><li class="twitter-icon"></li></a>
-					          <a href="https://plus.google.com/+wharton/posts"><li class="googleplus-icon"></li></a>
-					          <a href="https://www.youtube.com/user/thewhartonschool"><li class="youtube-icon"></li></a>
-					          <a href="https://www.flickr.com/photos/thewhartonschool/"><li class="flickr-icon"></li></a>
-					    </ul><!--/ end ul.social-icons__links -->
-				        <div id="knowledge-link">
-					          <a href="http://knowledge.wharton.upenn.edu/">
-						            <img src="{% static "base_theme/img/footer/knowledge-for.png" %}"/>
-					          </a>
-				        </div>
-			      </div><!--/ end col-md-2 social-icons -->
-			  </div><!--/ end row -->
 	      <div class="row copyright">
             <div class="col-md-12">
-    	      <ul class="copyright__menu--context-small">
-	   	          <li><a href="http://www.wharton.upenn.edu">Home</a></li>
-			      <li><a href="http://news.wharton.upenn.edu">News</a></li>
-			      <li><a href="http://www.wharton.upenn.edu/contact-us-directories">Contact Wharton</a></li>
-			      <li><a href="http://www.wharton.upenn.edu/locations">Locations</a></li>
-	          </ul><!--/ end context-small menu -->
-	          <a href="http://www.upenn.edu"><img src="{% static "base_theme/img/footer/Penn-footer-logo.png" alt="UPenn Logo" %}"/></a>
-	          <p>&copy; {% now "Y" %} <a href="http://www.wharton.upenn.edu/">The Wharton School,</a> <a href="http://www.upenn.edu">The University of Pennsylvania</a>
-	          {% block footer_app_link %}
-	              <span class="custom-app-link">|<a href="/">Your App Name Here</a></span>
-	          {% endblock footer_app_link %}</p>
+	          <p>&copy; {% now "Y" %} <a href="http://www.holzstock.com/">HOLZSTOCK.COM</a></p>
 	        </div><!--/ end row copyright -->
 	      </div><!--/ end col-md-12 -->
     </div><!--/ end container -->

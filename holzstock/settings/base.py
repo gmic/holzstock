@@ -167,9 +167,16 @@ WAGTAIL_SITE_NAME = "holzstock"
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://www.holzstock.com'
 
-EMBED_VIDEO_BACKENDS = (
-    'embed_video.backends.YoutubeBackend',
-    'embed_video.backends.VimeoBackend',
-    'embed_video.backends.SoundCloudBackend',
-    'my_app.backends.CustomBackend',
-)
+# Google API key: "AIzaSyDOCXZ29Tu4dVRn3lq3b5j8TEUVtDG39_o"
+# see: https://console.developers.google.com/apis/credentials?project=holzstock-156006
+# test url: https://www.youtube.com/embed/qdUOH3GeqxY
+# TODO: get embedly key!!!
+
+# WAGTAILEMBEDS_EMBEDLY_KEY = "AIzaSyDOCXZ29Tu4dVRn3lq3b5j8TEUVtDG39_o"
+
+# EMBED_VIDEO_BACKENDS = (
+#     'embed_video.backends.YoutubeBackend',
+#     'embed_video.backends.VimeoBackend',
+#     'embed_video.backends.SoundCloudBackend',
+#     'my_app.backends.CustomBackend',
+# )

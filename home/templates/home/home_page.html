@@ -5,7 +5,16 @@
 {% block body_class %}template-homepage1{% endblock %}
 
 {% block inner_content %}
-    {{ page.body|richtext }}
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/qdUOH3GeqxY" frameborder="0" allowfullscreen></iframe>
+    {% for block in page.body %}
+        {% if block.block_type == 'jumbotron' %}
+            {{ block.value }}
+        {% else %}
+            <section class="block-{{ block.block_type }}">
+                {% include_block block %}
+            </section>
+        {% endif %}
+    {% endfor %}
+
+    <!-- iframe width="560" height="315" src="https://www.youtube.com/embed/qdUOH3GeqxY" frameborder="0" allowfullscreen></iframe -->
 {% endblock %}
