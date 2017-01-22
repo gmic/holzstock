@@ -2,4 +2,4 @@ wagtail>=1.8,<1.9
 wagtail-embed-videos
 django-bootstrap3>=8.0,<9.0
 psycopg2>=2.6
-git+https://github.com/gmic/django-base-theme.git
+git+https://github.com/gmic/django-base-theme.git#egg=django-base-theme
