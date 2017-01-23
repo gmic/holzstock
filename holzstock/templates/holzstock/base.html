@@ -1,4 +1,4 @@
-{% load static wagtailuserbar %}
+{% load holzstock_tags static wagtailuserbar %}
 <!DOCTYPE html>
 {% load staticfiles %}
 {% load fontawesome %}
@@ -37,6 +37,10 @@
 
 {% block header_wrapper %}
 {% block header %}
+
+
+            {% get_site_root as site_root %}
+            {% top_menu parent=site_root calling_page=self %}
 
 
     <!-- Fixed navbar -->
@@ -79,8 +83,12 @@
       </div>
     </nav>
     -->
+
+
+<!--
       <nav id="top-nav" class="navbar navbar-default navbar-fixed-top">
       <div class="container">
+		<a class="navbar-brand" href="/"><img id="banner__logo" src="{% static "holzstock/img/LogoHS.png" %}" width="584" height="85" alt="Holzstocksückerklutzbonbon"></a>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -88,19 +96,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Holzstocksuckerklutzbonbon</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="/home">Home</a></li>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/">Home</a></li>
             <li><a href="/nieuws">Nieuws</a></li>
             <li><a href="/live">Live</a></li>
-            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
-
+-->
 
 {% block banner_wrapper %}
 {% endblock banner_wrapper %}

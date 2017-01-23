@@ -1,0 +1,30 @@
+{# see: https://github.com/wagtail/wagtaildemo/blob/master/demo/templates/demo/tags/top_menu.html #}
+{% load holzstock_tags wagtailcore_tags static%}
+{% get_site_root as site_root %}
+
+{# Implementation of bootstrap theme dropdown menu - shows top level links and their children #}
+<div role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        {# Link to home page #}
+        <a href="{% pageurl site_root %}" class="navbar-brand" title="{{ site_root.title }}" data-placement="bottom">
+            <img id="banner__logo" src="{% static "holzstock/img/LogoHS.png" %}" alt="Holzstocksückerklutzbonbon">
+        </a>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                {% for menuitem in menuitems %}
+                    <li class="{% if menuitem.active %} active{% endif %}">
+                            <a href="{% pageurl menuitem %}">{{ menuitem.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
