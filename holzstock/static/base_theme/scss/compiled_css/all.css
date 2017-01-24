@@ -5437,15 +5437,15 @@ textarea {
 
 @media (min-width: 992px) {
   .container {
-    width: 100%; } }
+    width: 992px; } }
 
 @media (min-width: 1200px) {
   .container {
-    width: 100%; } }
+    width: 992px; } }
 
 @media (min-width: 1470px) {
   .container {
-    width: 1470px; } }
+    width: 992px; } }
 
 /*------------------------------------*  #IE10 WIDTH SUPPORT
 \*------------------------------------*/
