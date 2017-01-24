@@ -1,9 +1,0 @@
-{% load wagtailimages_tags %}
-
-{% image value.image width-800 as tmp_image %}
-
-<div class="jumbotron jumbotron-dark" style="background-image:url({{ tmp_image.url }});" isrender="true">
-    <h2>{{ value.heading }}</h2>
-    <p class="lead">{{ value.paragraph }}</p>
-    <p><a class="btn btn-lg btn-success" href="#" role="button">Meld je nu aan</a></p>
-</div>

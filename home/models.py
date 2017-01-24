@@ -35,18 +35,17 @@ class TwoColumnBlock(blocks.StructBlock):
     ], icon='arrow-right', label='Right column content')
 
     class Meta:
-        template = 'holzstock/blocks/two_column_block.html'
+        template = 'home/blocks/two_column_block.html'
         icon = 'placeholder'
         label = 'Two Columns'
 
 
 class JumbotronBlock(blocks.StructBlock):
     image = ImageChooserBlock()
-    heading = blocks.CharBlock(classname="full title")
-    paragraph = blocks.RichTextBlock()
+    body = blocks.RichTextBlock()
 
     class Meta:
-        template = 'holzstock/blocks/jumbotron.html'
+        template = 'home/blocks/jumbotron.html'
         icon = 'user'
 
 
