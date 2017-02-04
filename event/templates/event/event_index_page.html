@@ -5,25 +5,27 @@
 {% block body_class %}event-index-page{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-sm-6">
-    <h2>Live events</h2>
-    {% for event in page.events %}
-        <h3>{{ event.date }}</h3>
-        <p>
-            {{ event.intro|richtext }}
-        </p>
-    {% endfor %}
-    <h2>Historie</h2>
-    {% for event in page.history %}
-        <h3>{{ event.date }}</h3>
-        <p>
-            {{ event.intro|richtext }}
-        </p>
-    {% endfor %}
-    </div>
-    <div class="col-sm-6">
-        {{ page.intro|richtext }}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+        <h2>Live events</h2>
+        {% for event in page.events %}
+            <h3>{{ event.date }}</h3>
+            <p>
+                {{ event.intro|richtext }}
+            </p>
+        {% endfor %}
+        <h2>Historie</h2>
+        {% for event in page.history %}
+            <h3>{{ event.date }}</h3>
+            <p>
+                {{ event.intro|richtext }}
+            </p>
+        {% endfor %}
+        </div>
+        <div class="col-sm-6">
+            {{ page.intro|richtext }}
+        </div>
     </div>
 </div>
 {% endblock %}

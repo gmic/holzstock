@@ -11,8 +11,11 @@ Design:
 
 Tech:
 
+- Backup website content **
 - Build js with gulpfile
-
+- Restore content in dev env
+- Use video plugin
+- Use mechanisms from ansible-multi-django (multi app)
 
 # Running gulp
 
