@@ -19,11 +19,14 @@
         </a>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                {% for menuitem in menuitems %}
-                    <li class="{% if menuitem.active %} active{% endif %}">
-                            <a href="{% pageurl menuitem %}">{{ menuitem.title }}</a>
-                    </li>
-                {% endfor %}
+            {% for menuitem in menuitems %}
+                <li class="{% if menuitem.active %} active{% endif %}">
+                    <a href="{% pageurl menuitem %}">{{ menuitem.title }}</a>
+                </li>
+            {% endfor %}
+                <li class="fb">
+                    <a class="" href="http://facebook.com/holzstock"><div class="facebook-icon"></div></a>
+                </li>
             </ul>
         </div>
     </div>

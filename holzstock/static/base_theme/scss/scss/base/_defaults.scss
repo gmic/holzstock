@@ -18,6 +18,7 @@
  *   - clearfix
  *   - search hide
  *   - btn
+ *   - social icons
  * BOOTSTRAP OVERRIDES
  *   - breakpoint
  *   - support-ie10-width
@@ -383,6 +384,40 @@ main#content {
             @include box-shadow(0px, 0px, 0px, 0px, none);
         }
     }
+}
+
+/*-------------------------------------*\
+  #SOCIAL ICONS
+\*-------------------------------------*/
+
+.facebook-icon,
+.flickr-icon,
+.googleplus-icon,
+.twitter-icon,
+.youtube-icon{
+	background: url('../../../base_theme/img/social/social_sprite.png') no-repeat;
+	width: 29px;
+	height: 29px;
+}
+
+.facebook-icon {
+	background-position: -11px -12px ;
+}
+
+.flickr-icon{
+	background-position: -60px -13px ;
+}
+
+.googleplus-icon{
+	background-position: -111px -13px ;
+}
+
+.twitter-icon{
+	background-position: -160px -13px ;
+}
+
+.youtube-icon{
+	background-position: -212px -12px ;
 }
 
 /*------------------------------------------*\
