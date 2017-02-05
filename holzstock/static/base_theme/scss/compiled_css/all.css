@@ -5248,12 +5248,12 @@ html {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-size: 18px;
-  font-size: 1.125rem; }
+  font-size: 19px;
+  font-size: 1.1875rem; }
 
 p {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 19px;
+  font-size: 1.1875rem;
   line-height: 1.5em;
   margin: 0 0 1.5em 0; }
 

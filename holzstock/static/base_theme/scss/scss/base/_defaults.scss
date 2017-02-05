@@ -50,12 +50,12 @@ html {
 	font-family: $roma;
 	word-wrap: break-word;
 	@include smoothing;
-	@include font-size(18px);
+	@include font-size(19px);
 }
    
 p {
     @extend .text_styles;
-	@include font-size(18px);
+	@include font-size(19px);
 	line-height: 1.5em;
 	margin: 0 0 1.5em 0;
 }
