@@ -266,9 +266,9 @@ textarea {
   }
 }
 
-.mx-3 {
-	margin-top: 20px;
-	margin-bottom: 20px;
+.mx-1 {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 /*------------------------------------*\
@@ -301,6 +301,10 @@ textarea {
 @media (min-width: 992px) {
   .container {
     width: 992px;
+  }
+  .mx-md-3 {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 @media (min-width: 1200px) {

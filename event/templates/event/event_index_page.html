@@ -6,7 +6,7 @@
 
 {% block content %}
 <div class="container">
-    <div class="row">
+    <div class="row mx-1 mx-md-3">
         <div class="col-sm-6">
             <h2><span class="label label-info">Live events</span></h2>
         {% for event in page.events %}
@@ -20,7 +20,7 @@
             {{ page.intro|richtext }}
         </div>
     </div>
-    <div class="row">
+    <div class="row mx-1 mx-md-3">
         <div class="col-sm-6">
             <h2><span class="label label-info">Historie</span></h2>
         {% for event in page.history %}
