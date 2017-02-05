@@ -335,19 +335,6 @@ textarea {
   #ROW PADDING (bootstrap overrides)
 \*-------------------------------------*/
 
-#header, 
-#banner, 
-#breadcrumb,
-.main-nav,
-#footer,
-section,
-#nav-top,
-#view-more {
-  .row {
-	  padding: 0px 40px;
-	}
-}
-
 @include x-large {
 	#header, 
 	#banner,
