@@ -15,6 +15,13 @@
                 {{ event.intro|richtext }}
             </p>
         {% endfor %}
+        </div>
+        <div class="col-sm-6">
+            {{ page.intro|richtext }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
         <h2>Historie</h2>
         {% for event in page.history %}
             <h3>{{ event.date }}</h3>
@@ -22,9 +29,6 @@
                 {{ event.intro|richtext }}
             </p>
         {% endfor %}
-        </div>
-        <div class="col-sm-6">
-            {{ page.intro|richtext }}
         </div>
     </div>
 </div>
