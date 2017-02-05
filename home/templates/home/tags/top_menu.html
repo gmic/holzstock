@@ -18,7 +18,7 @@
             <img id="banner__logo" src="{% static "base_theme/img/logo/LogoHS.png" %}" alt="Holzstocksückerklutzbonbon">
         </a>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-right">
                 {% for menuitem in menuitems %}
                     <li class="{% if menuitem.active %} active{% endif %}">
                             <a href="{% pageurl menuitem %}">{{ menuitem.title }}</a>

@@ -44,9 +44,8 @@
 
 .navbar-center {
 	position: absolute;
-	width: 350px;
+	width: 300px;
 	height: auto;
-	left: 0;
 	top: 0;
 	text-align: center;
 	margin: auto;
@@ -56,6 +55,7 @@
 @media (min-width: 768px) {
 	.navbar-center {
 		width: 100%;
+		max-width: 890px;
 		padding: 20px;
 	}
 	.navbar-nav {
