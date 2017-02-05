@@ -5416,6 +5416,10 @@ textarea {
     position: static;
     width: auto; }
 
+.mx-3 {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
 /*------------------------------------*  #CLEARFIX
 \*------------------------------------*/
 .clearfix:before,
