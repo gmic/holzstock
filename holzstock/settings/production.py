@@ -4,6 +4,8 @@ from .base import *
 
 DEBUG = False
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 ALLOWED_HOSTS = ['.holzstock.com']
 WWW_HOST = "www.holzstock.com"
 
