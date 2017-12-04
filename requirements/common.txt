@@ -1,4 +1,4 @@
-wagtail>=1.8,<1.11
+wagtail>=1.12,<1.13
 django-bootstrap3>=8.0,<10.0
 django-embed-video>=1.1,<1.2
 psycopg2>=2.6
